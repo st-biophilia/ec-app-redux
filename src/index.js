@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 // store modules
 import { Provider } from 'react-redux';
-import createStore from './store/store';
+import createStore from './ducks/store/store'
 
 // router modules
 import { ConnectedRouter } from 'connected-react-router';
