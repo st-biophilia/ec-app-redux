@@ -7,3 +7,8 @@ export const getUserId = createSelector(
     [usersSelector], 
     state => state.uid // store の state.users.uid を返す
 );
+
+export const getUsername = createSelector(
+    [usersSelector],
+    state => state.username
+)

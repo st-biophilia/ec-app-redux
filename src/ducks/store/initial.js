@@ -3,7 +3,7 @@ const initialState = {
     users: {
         isSignedIn: false,
         uid: '',
-        userName: ''
+        username: ''
     },
 
     products: {

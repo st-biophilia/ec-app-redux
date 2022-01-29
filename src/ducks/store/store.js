@@ -1,8 +1,13 @@
 // redux modules
-import { createStore as reduxCreateStore } from 'redux';
-import { combineReducers } from 'redux';
-import { applyMiddleware } from 'redux';
+import { 
+    createStore as reduxCreateStore,
+    combineReducers,
+    applyMiddleware
+
+} from 'redux';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
+import thunk from 'redux-thunk';
+
 
 // reducers
 // import { ProductsReducer } from '../products/reducer';
@@ -20,7 +25,8 @@ export default function createStore(history) {
             users: UsersReducer
         }),
         applyMiddleware(
-            routerMiddleware(history)
+            routerMiddleware(history),
+            thunk
         )
     );
 }

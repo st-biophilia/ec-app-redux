@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getUserId } from '../ducks/users/selectors';
+import { getUserId, getUsername } from '../ducks/users/selectors';
+
 
 const Home = () => {
 
@@ -8,12 +9,14 @@ const Home = () => {
     const selector = useSelector(state => state);
     // store の state.users.uid をもらう
     const uid = getUserId(selector);
+    const username = getUsername(selector);
 
     return(
         <React.Fragment>
-
             <h2>home</h2>
-            <p>{uid}</p>
+            <p>こんにちは</p>
+            <p>ユーザーID: {uid}</p>
+            <p>ユーザー名: {username}</p>
         </React.Fragment>
     );
 }
