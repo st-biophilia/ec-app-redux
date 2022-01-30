@@ -8,6 +8,8 @@ export const signIn = (/* email, password */) => {
 
         // 今 sign in しているかどうか確認
         const state = getState();
+        console.log(state);
+
         const isSignedIn = state.users.isSignedIn
 
         if (!isSignedIn) {
@@ -26,6 +28,7 @@ export const signIn = (/* email, password */) => {
                 username: username
             }));
 
+            // push で URL を変えることができる
             dispatch(push('/'));
         }
     }

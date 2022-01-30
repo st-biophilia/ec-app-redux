@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 import { Login, Home } from './templates';
 
+
+// パスに応じて表示するコンポーネントを変える
 const Router = () => {
     return(
         <Switch>

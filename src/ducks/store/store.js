@@ -12,6 +12,7 @@ import thunk from 'redux-thunk';
 // reducers
 // import { ProductsReducer } from '../products/reducer';
 import { UsersReducer } from '../users/reducer';
+import { ProductsReducer } from '../products/reducer';
 
 // このアプリケーションはなんの state を使っていて、その初期状態はなんなのかを定義している
 export default function createStore(history) {
@@ -20,10 +21,12 @@ export default function createStore(history) {
     return reduxCreateStore (
         // reducer をまとめたもの
         combineReducers({
-            //products: ProductsReducer,
-            router: connectRouter(history),
-            users: UsersReducer
+            router: connectRouter(history), // store に、パスの情報を router というキーで入れる
+            users: UsersReducer,
+            products: ProductsReducer,
         }),
+
+        // 使う middleware の宣言
         applyMiddleware(
             routerMiddleware(history),
             thunk

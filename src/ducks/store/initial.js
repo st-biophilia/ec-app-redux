@@ -7,7 +7,7 @@ const initialState = {
     },
 
     products: {
-
+        products: 'none'
     }
 }
 

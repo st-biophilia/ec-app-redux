@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// store modules
+// modules for store
 import { Provider } from 'react-redux';
 import createStore from './ducks/store/store'
 
-// router modules
+// modules for router
 import { ConnectedRouter } from 'connected-react-router';
 import * as History from 'history';
 
